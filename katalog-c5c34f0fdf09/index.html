@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id">
+<head><script src="/ummatstore-demo/demo.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<title>Katalog Merchandise — UmmatStore</title>
+<meta content="UmmatStore adalah toko resmi merchandise Partai Ummat: kemeja, kaos, bendera, pin, dan souvenir perjuangan." name="description"/>
+<link href="/ummatstore-demo/images/brand/logo-ummat.png" rel="icon" type="image/png"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/plus-jakarta-sans-400-normal-Dhut76fR.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/plus-jakarta-sans-500-normal-Bf-nb4oT.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/plus-jakarta-sans-600-normal-DLTa1BUW.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/outfit-400-normal-BGsTXAXT.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/outfit-500-normal-DKnIMDSk.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/outfit-600-normal-B7SfZ07L.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/jetbrains-mono-400-normal-V6pRDFza.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="anonymous" href="/ummatstore-demo/build/assets/jetbrains-mono-500-normal-BWZEU5yA.woff2" rel="preload" type="font/woff2"/>
+<style>
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/plus-jakarta-sans-400-normal-Dhut76fR.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/plus-jakarta-sans-400-normal-BDKaGhyp.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/plus-jakarta-sans-500-normal-Bf-nb4oT.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/plus-jakarta-sans-500-normal-DYtqi0QS.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/plus-jakarta-sans-600-normal-DLTa1BUW.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/plus-jakarta-sans-600-normal-BR_Ojra4.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/outfit-400-normal-BGsTXAXT.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/outfit-400-normal-DMwTpYkH.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/outfit-500-normal-DKnIMDSk.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/outfit-500-normal-ClnHRwRh.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/outfit-600-normal-B7SfZ07L.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/outfit-600-normal-BEfTtDA7.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/jetbrains-mono-400-normal-V6pRDFza.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/jetbrains-mono-400-normal-6-qcROiO.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/jetbrains-mono-500-normal-BWZEU5yA.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/ummatstore-demo/build/assets/jetbrains-mono-500-normal-CJOVTJB7.woff") format("woff");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root {
+  --font-plus-jakarta-sans: "Plus Jakarta Sans";
+  --font-outfit: "Outfit";
+  --font-jetbrains-mono: "JetBrains Mono";
+}
+
+.font-plus-jakarta-sans {
+  font-family: var(--font-plus-jakarta-sans);
+}
+
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+
+.font-jetbrains-mono {
+  font-family: var(--font-jetbrains-mono);
+}
+</style>
+<link as="style" href="/ummatstore-demo/build/assets/app-Cqle0n0G.css" rel="preload"/><link as="script" href="/ummatstore-demo/build/assets/app-ECXXmkRF.js" rel="modulepreload"/><link href="/ummatstore-demo/build/assets/app-Cqle0n0G.css" rel="stylesheet"/><script src="/ummatstore-demo/build/assets/app-ECXXmkRF.js" type="module"></script><meta content="noindex, nofollow" name="robots"/><style>#demo-notice{padding:9px 16px;background:#17150f;color:#fff;text-align:center;font:12px/1.5 sans-serif}html{scroll-padding-top:90px}</style></head>
+<body class="min-h-screen bg-paper text-ink antialiased"><div id="demo-notice" role="note">Demo tampilan UmmatStore — bukan toko aktif. Login dan transaksi dinonaktifkan.</div>
+<header class="sticky top-0 z-50 border-b border-line-soft bg-paper/90 backdrop-blur transition-colors duration-200 [&amp;.is-scrolled]:border-line" data-header="">
+<div class="relative flex h-16 w-full items-center justify-between gap-4 px-5 lg:px-8">
+<a class="flex shrink-0 items-center gap-2.5" href="/ummatstore-demo/">
+<img alt="Logo Partai Ummat" class="h-8 w-8 object-contain" src="/ummatstore-demo/images/brand/logo-ummat.png"/>
+<span class="font-display text-[1.06rem] font-semibold tracking-tight text-ink">UmmatStore</span>
+</a>
+<nav aria-label="Navigasi utama" class="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-5 whitespace-nowrap lg:flex xl:gap-7">
+<a class="nav-link" href="/ummatstore-demo/">Beranda</a>
+<a class="nav-link is-active" href="/ummatstore-demo/katalog/">Katalog</a>
+<a class="nav-link" data-demo-only="" href="#demo">Lacak Pesanan</a>
+</nav>
+<div class="flex shrink-0 items-center gap-2">
+<form action="#demo" class="hidden md:block w-[170px] lg:w-[120px] xl:w-[220px]" data-demo-only="" method="get">
+<div class="relative w-full">
+<span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-dim">
+<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path>
+</svg>
+</span>
+<input aria-label="Cari produk" class="input-lux !py-2.5 !pl-9 !text-sm" name="q" placeholder="Cari merchandise…" type="search" value=""/>
+</div>
+</form>
+<a aria-label="Keranjang" class="icon-btn relative" data-demo-only="" href="#demo">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M6 8h12l1 12H5L6 8Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+</svg>
+</a>
+<a class="btn btn-ghost btn-sm hidden sm:inline-flex" data-demo-only="" href="#demo">Masuk</a>
+<button aria-expanded="false" aria-label="Menu" class="icon-btn lg:hidden" data-menu-toggle="" type="button">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M4 7h16M4 12h16M4 17h16"></path>
+</svg>
+</button>
+</div>
+</div>
+<div class="hidden border-t border-line-soft bg-paper px-5 pb-4 lg:!hidden [&amp;.is-open]:block" data-menu="">
+<form action="#demo" class="py-4 md:hidden" data-demo-only="" method="get">
+<input class="input-lux !text-sm" name="q" placeholder="Cari merchandise…" type="search" value=""/>
+</form>
+<div class="flex flex-col divide-y divide-line-soft text-center">
+<a class="py-3 text-sm font-medium text-muted hover:text-ink" href="/ummatstore-demo/">Beranda</a>
+<a class="py-3 text-sm font-medium text-muted hover:text-ink" href="/ummatstore-demo/katalog/">Katalog</a>
+<a class="py-3 text-sm font-medium text-muted hover:text-ink" data-demo-only="" href="#demo">Keranjang (0)</a>
+<a class="py-3 text-sm font-medium text-muted hover:text-ink" data-demo-only="" href="#demo">Lacak Pesanan</a>
+<a class="py-3 text-sm font-medium text-muted hover:text-ink" data-demo-only="" href="#demo">Masuk / Daftar</a>
+</div>
+</div>
+</header>
+<main>
+<section class="border-b border-line-soft">
+<div class="mx-auto max-w-[1280px] px-5 pt-6 pb-6 lg:px-8">
+<nav class="flex items-center gap-2 text-xs text-muted-dim">
+<a class="hover:text-ink" href="/ummatstore-demo/">Beranda</a>
+<svg aria-hidden="true" class="w-3 h-3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+<span class="text-muted">Katalog</span>
+</nav>
+<h1 class="section-title mt-3">Katalog merchandise</h1>
+</div>
+</section>
+<div class="mx-auto max-w-[1280px] px-5 py-8 lg:px-8">
+<div class="flex flex-wrap items-center justify-center gap-2">
+<a class="chip cursor-pointer !px-4 !py-2 text-sm chip-active" href="/ummatstore-demo/katalog/">
+                Semua
+            </a>
+<a class="chip cursor-pointer !px-4 !py-2 text-sm" href="/ummatstore-demo/katalog-6c971dfeeff0/">
+                    Pakaian
+                </a>
+<a class="chip cursor-pointer !px-4 !py-2 text-sm" href="/ummatstore-demo/katalog-b1537570036f/">
+                    Atribut &amp; Bendera
+                </a>
+<a class="chip cursor-pointer !px-4 !py-2 text-sm" href="/ummatstore-demo/katalog-328f16da41d6/">
+                    Pin &amp; Gantungan
+                </a>
+<a class="chip cursor-pointer !px-4 !py-2 text-sm" href="/ummatstore-demo/katalog-cb10233de8c0/">
+                    Souvenir
+                </a>
+<a class="chip cursor-pointer !px-4 !py-2 text-sm" href="/ummatstore-demo/katalog-0059383cd49b/">
+                    Alat Peraga
+                </a>
+</div>
+<div class="mt-8 flex flex-wrap items-center justify-between gap-3 border-b border-line-soft pb-4">
+<p class="text-sm text-muted">
+<span class="num font-medium text-ink">14</span> produk ditemukan
+                            </p>
+</div>
+<div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+<a class="product-card group" href="/ummatstore-demo/produk/pin-ummat-emas/">
+<div class="product-card__media">
+<img alt="Pin Ummat Emas" loading="lazy" src="/ummatstore-demo/images/products/pin-ummat-emas.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+<span class="badge badge-gold">Terlaris</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Pin &amp; Gantungan</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Pin Ummat Emas
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 15.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 615.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/stiker-ummat-pack/">
+<div class="product-card__media">
+<img alt="Stiker Ummat Pack" loading="lazy" src="/ummatstore-demo/images/products/stiker-ummat-pack.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+<span class="badge badge-gold">Terlaris</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Alat Peraga</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Stiker Ummat Pack
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 10.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/kaos-dakwah-ummat/">
+<div class="product-card__media">
+<img alt="Kaos Dakwah Ummat" loading="lazy" src="/ummatstore-demo/images/products/kaos-dakwah-ummat.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+<span class="badge badge-gold">Terlaris</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Pakaian</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Kaos Dakwah Ummat
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 95.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 115.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/gantungan-kunci-akrilik-ummat/">
+<div class="product-card__media">
+<img alt="Gantungan Kunci Akrilik Ummat" loading="lazy" src="/ummatstore-demo/images/products/gantungan-kunci-akrilik-ummat.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Pin &amp; Gantungan</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Gantungan Kunci Akrilik Ummat
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 12.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/bendera-ummat-90x150-cm/">
+<div class="product-card__media">
+<img alt="Bendera Ummat 90x150 cm" loading="lazy" src="/ummatstore-demo/images/products/bendera-ummat-90x150-cm.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Atribut &amp; Bendera</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Bendera Ummat 90x150 cm
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 30.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 75.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/kemeja-ummat-lengan-panjang/">
+<div class="product-card__media">
+<img alt="Kemeja Ummat Lengan Panjang" loading="lazy" src="/ummatstore-demo/images/products/kemeja-ummat-lengan-panjang.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Pakaian</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Kemeja Ummat Lengan Panjang
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 185.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 205.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/topi-ummat-bordir/">
+<div class="product-card__media">
+<img alt="Topi Ummat Bordir" loading="lazy" src="/ummatstore-demo/images/products/topi-ummat-bordir.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Souvenir</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Topi Ummat Bordir
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 75.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 85.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/polo-shirt-ummat-bordir/">
+<div class="product-card__media">
+<img alt="Polo Shirt Ummat Bordir" loading="lazy" src="/ummatstore-demo/images/products/polo-shirt-ummat-bordir.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Pakaian</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Polo Shirt Ummat Bordir
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 135.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 155.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/bendera-meja-tiang/">
+<div class="product-card__media">
+<img alt="Bendera Meja + Tiang" loading="lazy" src="/ummatstore-demo/images/products/bendera-meja-tiang.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Atribut &amp; Bendera</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Bendera Meja + Tiang
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 35.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/mug-keramik-ummat/">
+<div class="product-card__media">
+<img alt="Mug Keramik Ummat" loading="lazy" src="/ummatstore-demo/images/products/mug-keramik-ummat.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Souvenir</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Mug Keramik Ummat
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 55.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/tumbler-stainless-ummat/">
+<div class="product-card__media">
+<img alt="Tumbler Stainless Ummat" loading="lazy" src="/ummatstore-demo/images/products/tumbler-stainless-ummat.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Souvenir</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Tumbler Stainless Ummat
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 88.000</p>
+<p class="num mt-0.5 text-xs text-muted-dim">s/d Rp 93.000</p>
+</div>
+</div>
+</a>
+<a class="product-card group" href="/ummatstore-demo/produk/tas-kanvas-ummat/">
+<div class="product-card__media">
+<img alt="Tas Kanvas Ummat" loading="lazy" src="/ummatstore-demo/images/products/tas-kanvas-ummat.webp"/>
+<div class="absolute left-3 top-3 flex flex-col gap-2">
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-1.5 p-4">
+<span class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-dim">Souvenir</span>
+<h3 class="line-clamp-2 text-[0.95rem] font-semibold leading-snug text-ink transition-colors duration-200 group-hover:text-gold">
+            Tas Kanvas Ummat
+        </h3>
+<div class="mt-auto pt-2">
+<p class="price text-[0.95rem] font-medium text-ink">Rp 125.000</p>
+</div>
+</div>
+</a>
+</div>
+<div class="mt-8">
+<nav aria-label="Pagination Navigation" class="flex flex-wrap items-center justify-between gap-4" role="navigation">
+<p class="hidden text-[13px] text-muted-dim sm:block">
+            Menampilkan
+                            <span class="font-medium text-ink">1–12</span>
+                        dari <span class="font-medium text-ink">14</span> produk
+        </p>
+<div class="flex min-w-0 flex-1 flex-wrap items-center justify-center gap-2 lg:flex-none lg:justify-end">
+<span aria-disabled="true" aria-label="pagination.previous" class="chip cursor-not-allowed opacity-40">
+<svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="m15 6-6 6 6 6"></path>
+</svg>
+ Sebelumnya
+                </span>
+<span class="chip chip-active cursor-default">1</span>
+<a aria-label="Go to page 2" class="chip transition hover:border-line-gold hover:text-gold" href="/ummatstore-demo/katalog-bc7c7eb0ad0a/">2</a>
+<a aria-label="pagination.next" class="chip transition hover:border-line-gold hover:text-gold" href="/ummatstore-demo/katalog-bc7c7eb0ad0a/" rel="next">
+                    Berikutnya <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-line-soft bg-surface">
+<div class="mx-auto max-w-[1200px] px-5 py-14 lg:px-8">
+<div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1.2fr]">
+<div>
+<div class="flex items-center gap-2.5">
+<img alt="Logo Partai Ummat" class="h-8 w-8 object-contain" src="/ummatstore-demo/images/brand/logo-ummat.png"/>
+<span class="font-display text-lg font-semibold tracking-tight text-ink">UmmatStore</span>
+</div>
+<p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">
+                    Toko resmi merchandise Partai Ummat. Setiap pembelian mendukung perjuangan menegakkan keadilan.
+                </p>
+<p class="mt-4 font-mono text-[11px] uppercase tracking-[0.16em] text-gold">Lawan Kedzoliman, Tegakkan Keadilan</p>
+</div>
+<div>
+<h3 class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted-dim">Kategori</h3>
+<ul class="mt-4 space-y-2.5 text-sm">
+<li>
+<a class="text-muted transition-colors duration-200 hover:text-ink" href="/ummatstore-demo/katalog-6c971dfeeff0/">
+                                Pakaian
+                            </a>
+</li>
+<li>
+<a class="text-muted transition-colors duration-200 hover:text-ink" href="/ummatstore-demo/katalog-b1537570036f/">
+                                Atribut &amp; Bendera
+                            </a>
+</li>
+<li>
+<a class="text-muted transition-colors duration-200 hover:text-ink" href="/ummatstore-demo/katalog-328f16da41d6/">
+                                Pin &amp; Gantungan
+                            </a>
+</li>
+<li>
+<a class="text-muted transition-colors duration-200 hover:text-ink" href="/ummatstore-demo/katalog-cb10233de8c0/">
+                                Souvenir
+                            </a>
+</li>
+<li>
+<a class="text-muted transition-colors duration-200 hover:text-ink" href="/ummatstore-demo/katalog-0059383cd49b/">
+                                Alat Peraga
+                            </a>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-mono text-[11px] uppercase tracking-[0.16em] text-muted-dim">Bantuan</h3>
+<ul class="mt-4 space-y-3 text-sm text-muted">
+<li class="flex items-start gap-3">
+<svg aria-hidden="true" class="mt-0.5 w-4 h-4 shrink-0 text-muted-dim" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M7 4h4l1 4-2 1a9 9 0 0 0 5 5l1-2 4 1v4c0 1-1 2-2 2A15 15 0 0 1 5 6c0-1 1-2 2-2Z"></path>
+</svg>
+<a class="transition-colors duration-200 hover:text-ink" data-demo-only="" href="#demo">081200000001</a>
+</li>
+<li class="flex items-start gap-3">
+<svg aria-hidden="true" class="mt-0.5 w-4 h-4 shrink-0 text-muted-dim" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path>
+</svg>
+<a class="transition-colors duration-200 hover:text-ink" data-demo-only="" href="#demo">toko@ummatstore.test</a>
+</li>
+<li class="flex items-start gap-3">
+<svg aria-hidden="true" class="mt-0.5 w-4 h-4 shrink-0 text-muted-dim" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M12 21s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z"></path><circle cx="12" cy="11" r="2.3"></circle>
+</svg>
+<span>Jl. Merdeka No. 1, Jakarta Pusat</span>
+</li>
+</ul>
+</div>
+</div>
+<hr class="divider-gold my-10"/>
+<div class="flex flex-col gap-3 text-xs text-muted-dim sm:flex-row sm:items-center sm:justify-between">
+<p>© 2026 Partai Ummat. Seluruh hak cipta dilindungi.</p>
+<p class="flex items-center gap-2">
+<svg aria-hidden="true" class="w-4 h-4 text-muted-dim" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<rect height="12" rx="2" width="18" x="3" y="6"></rect><path d="M3 10h18"></path>
+</svg>
+                Metode pembayaran: Transfer bank
+            </p>
+</div>
+</div>
+</footer>
+<div aria-atomic="false" aria-live="polite" class="toast-stack" data-toast-wrap=""></div>
+<div data-dialog-root=""></div>
+<template id="tpl-toast">
+<div class="toast" role="status">
+<span class="toast__icon">
+<svg aria-hidden="true" class="w-4 h-4" data-icon="gold" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="m5 13 4 4 10-10"></path>
+</svg>
+<svg aria-hidden="true" class="hidden w-4 h-4" data-icon="danger" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M12 4.2 21 20H3l9-15.8Z"></path><path d="M12 10.2v4M12 17h.01"></path>
+</svg>
+<svg aria-hidden="true" class="hidden w-4 h-4" data-icon="info" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M12 4l1.6 4.4L18 10l-4.4 1.6L12 16l-1.6-4.4L6 10l4.4-1.6L12 4Z"></path>
+</svg>
+</span>
+<div class="toast__body">
+<p class="toast__title" data-toast-title=""></p>
+<p class="toast__msg" data-toast-msg=""></p>
+</div>
+<button aria-label="Tutup notifikasi" class="toast__close" data-toast-close="" type="button">
+<svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M6 6l12 12M18 6 6 18"></path>
+</svg>
+</button>
+<span aria-hidden="true" class="toast__bar"></span>
+</div>
+</template>
+<template id="tpl-dialog">
+<div aria-labelledby="dialog-judul" aria-modal="true" class="dialog-overlay" role="dialog">
+<div class="dialog">
+<span class="dialog__icon">
+<svg aria-hidden="true" class="w-5 h-5" data-icon="danger" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M12 4.2 21 20H3l9-15.8Z"></path><path d="M12 10.2v4M12 17h.01"></path>
+</svg>
+<svg aria-hidden="true" class="hidden w-5 h-5" data-icon="gold" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="m5 13 4 4 10-10"></path>
+</svg>
+</span>
+<h2 class="dialog__title" data-dialog-title="" id="dialog-judul">Lanjutkan?</h2>
+<p class="dialog__msg" data-dialog-msg=""></p>
+<div class="dialog__actions">
+<button class="btn btn-ghost btn-sm" data-dialog-cancel="" type="button">Batal</button>
+<button class="btn btn-gold btn-sm" data-dialog-ok="" type="button">Lanjutkan</button>
+</div>
+</div>
+</div>
+</template>
+</body>
+</html>
